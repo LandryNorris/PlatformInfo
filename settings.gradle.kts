@@ -14,6 +14,6 @@ pluginManagement {
     }
 }
 
-rootProject.name = "PlatformInfo2"
+rootProject.name = "PlatformInfo"
 
 include(":platforminfo")
