@@ -1,8 +1,4 @@
 package com.landry.platforminfo
 
-actual class PlatformInfo {
-    actual companion object {
-        actual val platform = Platform.MAC
-        actual val arch: Arch = Arch.Arm64
-    }
-}
+internal actual val platform: Platform =  Platform.MAC
+internal actual val arch: Arch = Arch.Arm64

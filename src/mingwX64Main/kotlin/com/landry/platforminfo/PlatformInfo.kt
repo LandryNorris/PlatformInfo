@@ -1,8 +1,4 @@
 package com.landry.platforminfo
 
-actual class PlatformInfo {
-    actual companion object {
-        actual val platform = Platform.WINDOWS
-        actual val arch: Arch = Arch.X64
-    }
-}
+internal actual val platform: Platform =  Platform.WINDOWS
+internal actual val arch: Arch = Arch.X64

@@ -1,3 +1,15 @@
+buildscript {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.20")
+        classpath("com.android.tools.build:gradle:7.1.0")
+    }
+}
+
 plugins {
     kotlin("multiplatform") version "1.6.20"
 }
@@ -7,6 +19,7 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    google()
 }
 
 kotlin {

@@ -1,12 +1,12 @@
 package com.landry.platforminfo
 
-enum class Platform {
-    Android,
-    IOS,
-    WINDOWS,
-    MAC,
-    LINUX,
-    JS,
-    JVM,
-    ZEPHYR
+sealed class Platform {
+    object JVM: Platform()
+    object Android: Platform()
+    object IOS: Platform()
+    object WINDOWS: Platform()
+    object MAC: Platform()
+    object LINUX: Platform()
+    object JS: Platform()
+    object ZEPHYR: Platform()
 }
