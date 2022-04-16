@@ -1,0 +1,8 @@
+builtins_platform=JS
+unique_name=me.landrynorris\:platforminfo_test
+compiler_version=1.6.20
+depends=me.landrynorris\:platforminfo kotlin-test kotlin
+jsOutputName=PlatformInfo-platforminfo-js-ir-test
+abi_version=1.6.0
+metadata_version=1.4.1
+ir_version=1.0.0

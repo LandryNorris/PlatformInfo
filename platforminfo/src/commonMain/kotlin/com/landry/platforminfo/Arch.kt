@@ -24,5 +24,5 @@ sealed class Arch {
     /**
      * JS code-based virtual architecture
      */
-    object Js: Arch()
+    object JS: Arch()
 }

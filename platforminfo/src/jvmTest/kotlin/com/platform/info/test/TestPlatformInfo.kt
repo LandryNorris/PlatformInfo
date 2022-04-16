@@ -5,11 +5,14 @@ import com.landry.platforminfo.Platform
 import com.landry.platforminfo.PlatformInfo
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFalse
 
 class TestPlatformInfo {
     @Test
     fun testPlatformInfo() {
         assertEquals(Platform.JVM, PlatformInfo.platform)
         assertEquals(Arch.Jvm, PlatformInfo.arch)
+
+        assertFalse(PlatformInfo.isMobile)
     }
 }

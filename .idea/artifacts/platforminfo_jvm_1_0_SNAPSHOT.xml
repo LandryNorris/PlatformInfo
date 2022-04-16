@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="platforminfo-jvm-1.0-SNAPSHOT">
-    <output-path>$PROJECT_DIR$/platforminfo/build/libs</output-path>
-    <root id="archive" name="platforminfo-jvm-1.0-SNAPSHOT.jar" />
-  </artifact>
-</component>

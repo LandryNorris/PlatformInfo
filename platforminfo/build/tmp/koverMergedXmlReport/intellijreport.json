@@ -1,0 +1,21 @@
+{
+  "reports": [ 
+        {"ic": "/Users/landrynorris/IdeaProjects/PlatformInfo/platforminfo/build/kover/jvmTest.ic"}
+    ], 
+  "xml": "/Users/landrynorris/IdeaProjects/PlatformInfo/platforminfo/build/my-merged-report/result.xml",
+  "include": {
+    "classes": ["com\\.platform\\.info\\.test\\..*"]
+  },
+  "modules": [
+    {
+      "output": [
+        "/Users/landrynorris/IdeaProjects/PlatformInfo/platforminfo/build/classes/kotlin/jvm/main"
+      ],
+      "sources": [
+        "/Users/landrynorris/IdeaProjects/PlatformInfo/platforminfo/src/jvmMain/kotlin",
+        "/Users/landrynorris/IdeaProjects/PlatformInfo/platforminfo/src/jvmMain/resources",
+        "/Users/landrynorris/IdeaProjects/PlatformInfo/platforminfo/src/commonMain/kotlin"
+      ]
+    }
+  ]
+}

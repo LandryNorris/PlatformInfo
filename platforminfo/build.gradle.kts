@@ -1,6 +1,7 @@
 
 plugins {
     kotlin("multiplatform")
+    id("org.jetbrains.kotlinx.kover") version "0.5.0"
 }
 
 group = "me.landrynorris"
@@ -59,4 +60,24 @@ kotlin {
             }
         }
     }
+}
+
+tasks.koverMergedHtmlReport {
+    isEnabled = true                        // false to disable report generation
+    htmlReportDir.set(layout.buildDirectory.dir("my-merged-report/html-result"))
+
+    includes = listOf("*")            // inclusion rules for classes
+}
+
+tasks.koverMergedXmlReport {
+    isEnabled = true                        // false to disable report generation
+    xmlReportFile.set(layout.buildDirectory.file("my-merged-report/result.xml"))
+
+    includes = listOf("com.platform.info.test.*")            // inclusion rules for classes
+}
+
+kover {
+    isDisabled = false
+    coverageEngine.set(kotlinx.kover.api.CoverageEngine.INTELLIJ)
+    generateReportOnCheck = true
 }
