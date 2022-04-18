@@ -1,11 +1,11 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kotlin_me_landrynorris_platforminfo.js', './kotlin_kotlin_test.js', './kotlin_kotlin.js'], factory);
+    define(['exports', './kotlin_io_github_landrynorris_platforminfo.js', './kotlin_kotlin_test.js', './kotlin_kotlin.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kotlin_me_landrynorris_platforminfo.js'), require('./kotlin_kotlin_test.js'), require('./kotlin_kotlin.js'));
+    factory(module.exports, require('./kotlin_io_github_landrynorris_platforminfo.js'), require('./kotlin_kotlin_test.js'), require('./kotlin_kotlin.js'));
   else {
-    if (typeof kotlin_me_landrynorris_platforminfo === 'undefined') {
-      throw new Error("Error loading module 'PlatformInfo-platforminfo-js-ir-test'. Its dependency 'kotlin_me_landrynorris_platforminfo' was not found. Please, check whether 'kotlin_me_landrynorris_platforminfo' is loaded prior to 'PlatformInfo-platforminfo-js-ir-test'.");
+    if (typeof kotlin_io_github_landrynorris_platforminfo === 'undefined') {
+      throw new Error("Error loading module 'PlatformInfo-platforminfo-js-ir-test'. Its dependency 'kotlin_io_github_landrynorris_platforminfo' was not found. Please, check whether 'kotlin_io_github_landrynorris_platforminfo' is loaded prior to 'PlatformInfo-platforminfo-js-ir-test'.");
     }
     if (typeof kotlin_kotlin_test === 'undefined') {
       throw new Error("Error loading module 'PlatformInfo-platforminfo-js-ir-test'. Its dependency 'kotlin_kotlin_test' was not found. Please, check whether 'kotlin_kotlin_test' is loaded prior to 'PlatformInfo-platforminfo-js-ir-test'.");
@@ -13,24 +13,24 @@
     if (typeof kotlin_kotlin === 'undefined') {
       throw new Error("Error loading module 'PlatformInfo-platforminfo-js-ir-test'. Its dependency 'kotlin_kotlin' was not found. Please, check whether 'kotlin_kotlin' is loaded prior to 'PlatformInfo-platforminfo-js-ir-test'.");
     }
-    root['PlatformInfo-platforminfo-js-ir-test'] = factory(typeof this['PlatformInfo-platforminfo-js-ir-test'] === 'undefined' ? {} : this['PlatformInfo-platforminfo-js-ir-test'], kotlin_me_landrynorris_platforminfo, kotlin_kotlin_test, kotlin_kotlin);
+    root['PlatformInfo-platforminfo-js-ir-test'] = factory(typeof this['PlatformInfo-platforminfo-js-ir-test'] === 'undefined' ? {} : this['PlatformInfo-platforminfo-js-ir-test'], kotlin_io_github_landrynorris_platforminfo, kotlin_kotlin_test, kotlin_kotlin);
   }
-}(this, function (_, kotlin_me_landrynorris_platforminfo, kotlin_kotlin_test, kotlin_kotlin) {
+}(this, function (_, kotlin_io_github_landrynorris_platforminfo, kotlin_kotlin_test, kotlin_kotlin) {
   //region block: imports
-  var Arm32_getInstance = kotlin_me_landrynorris_platforminfo.$crossModule$.Arm32_getInstance;
-  var Arm = kotlin_me_landrynorris_platforminfo.$crossModule$.Arm;
+  var Arm32_getInstance = kotlin_io_github_landrynorris_platforminfo.$crossModule$.Arm32_getInstance;
+  var Arm = kotlin_io_github_landrynorris_platforminfo.$crossModule$.Arm;
   var assertTrue$default = kotlin_kotlin_test.$crossModule$.assertTrue$default;
-  var Arm64_getInstance = kotlin_me_landrynorris_platforminfo.$crossModule$.Arm64_getInstance;
-  var X64_getInstance = kotlin_me_landrynorris_platforminfo.$crossModule$.X64_getInstance;
-  var X86 = kotlin_me_landrynorris_platforminfo.$crossModule$.X86;
-  var X86_32_getInstance = kotlin_me_landrynorris_platforminfo.$crossModule$.X86_32_getInstance;
+  var Arm64_getInstance = kotlin_io_github_landrynorris_platforminfo.$crossModule$.Arm64_getInstance;
+  var X64_getInstance = kotlin_io_github_landrynorris_platforminfo.$crossModule$.X64_getInstance;
+  var X86 = kotlin_io_github_landrynorris_platforminfo.$crossModule$.X86;
+  var X86_32_getInstance = kotlin_io_github_landrynorris_platforminfo.$crossModule$.X86_32_getInstance;
   var suite = kotlin_kotlin_test.$crossModule$.suite;
   var Unit_getInstance = kotlin_kotlin.$crossModule$.Unit_getInstance;
   var test = kotlin_kotlin_test.$crossModule$.test;
-  var JS_getInstance = kotlin_me_landrynorris_platforminfo.$crossModule$.JS_getInstance_1;
-  var PlatformInfo_getInstance = kotlin_me_landrynorris_platforminfo.$crossModule$.PlatformInfo_getInstance;
+  var JS_getInstance = kotlin_io_github_landrynorris_platforminfo.$crossModule$.JS_getInstance_1;
+  var PlatformInfo_getInstance = kotlin_io_github_landrynorris_platforminfo.$crossModule$.PlatformInfo_getInstance;
   var assertEquals$default = kotlin_kotlin_test.$crossModule$.assertEquals$default;
-  var JS_getInstance_0 = kotlin_me_landrynorris_platforminfo.$crossModule$.JS_getInstance;
+  var JS_getInstance_0 = kotlin_io_github_landrynorris_platforminfo.$crossModule$.JS_getInstance;
   //endregion
   'use strict';
   //region block: pre-declaration

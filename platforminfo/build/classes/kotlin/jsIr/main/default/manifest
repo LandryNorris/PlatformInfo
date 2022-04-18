@@ -1,5 +1,5 @@
 builtins_platform=JS
-unique_name=com.landry.platform.info\:platforminfo
+unique_name=io.github.landrynorris\:platforminfo
 compiler_version=1.6.20
 depends=kotlin
 jsOutputName=PlatformInfo-platforminfo-js-ir

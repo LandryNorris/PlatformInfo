@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "io.github.landrynorris"
-version = "1.0.1"
+version = "1.0.2"
 
 val properties by lazy {
     Properties().also { it.load(project.rootProject.file("local.properties").inputStream()) }
@@ -93,18 +93,17 @@ publishing {
     publications {
         create<MavenPublication>("release") {
             groupId = "io.github.landrynorris"
-            artifactId = "platform-info"
+            artifactId = "platforminfo"
             from(components["kotlin"])
             //from(components["java"])
             pom {
-                name.set("platform-info")
+                name.set("platforminfo")
                 description.set("Kotlin Multiplatform Library providing platform info")
                 url.set("https://github.com/LandryNorris/PlatformInfo")
                 licenses {
                     license {
                         name.set("The MIT License")
                         url.set("https://opensource.org/licenses/MIT")
-
                     }
                 }
                 scm {

@@ -1,6 +1,6 @@
 package com.platform.info.test
 
-import com.landry.platforminfo.Arch
+import io.github.landrynorris.platform.info.Arch
 import kotlin.test.Test
 import kotlin.test.assertTrue
 

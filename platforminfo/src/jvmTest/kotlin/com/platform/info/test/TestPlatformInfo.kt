@@ -1,8 +1,8 @@
 package com.platform.info.test
 
-import com.landry.platforminfo.Arch
-import com.landry.platforminfo.Platform
-import com.landry.platforminfo.PlatformInfo
+import io.github.landrynorris.platform.info.Arch
+import io.github.landrynorris.platform.info.Platform
+import io.github.landrynorris.platform.info.PlatformInfo
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse

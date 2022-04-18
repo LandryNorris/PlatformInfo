@@ -5,12 +5,13 @@ plugins {
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
     google()
 }
 
 kotlin {
     dependencies {
-        implementation("io.github.landrynorris:platform-info:1.0")
+        implementation("io.github.landrynorris:platforminfo:1.0.2")
     }
 }

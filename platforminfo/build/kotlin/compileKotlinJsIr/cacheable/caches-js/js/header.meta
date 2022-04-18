@@ -1,2 +1,2 @@
 
-'<com.landry.platform.info:platforminfo>:com.landry.platforminfo
+%<io.github.landrynorris:platforminfo>:$io.github.landrynorris.platform.info
