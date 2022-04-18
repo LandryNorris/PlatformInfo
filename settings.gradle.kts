@@ -17,3 +17,4 @@ pluginManagement {
 rootProject.name = "PlatformInfo"
 
 include(":platforminfo")
+include(":testapp-jvm")

@@ -1,11 +1,18 @@
+import java.util.Properties
 
 plugins {
     kotlin("multiplatform")
     id("org.jetbrains.kotlinx.kover") version "0.5.0"
+    id("maven-publish")
+    id("signing")
 }
 
-group = "me.landrynorris"
-version = "1.0-SNAPSHOT"
+group = "io.github.landrynorris"
+version = "1.0.1"
+
+val properties by lazy {
+    Properties().also { it.load(project.rootProject.file("local.properties").inputStream()) }
+}
 
 repositories {
     mavenCentral()
@@ -80,4 +87,63 @@ kover {
     isDisabled = false
     coverageEngine.set(kotlinx.kover.api.CoverageEngine.INTELLIJ)
     generateReportOnCheck = true
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            groupId = "io.github.landrynorris"
+            artifactId = "platform-info"
+            from(components["kotlin"])
+            //from(components["java"])
+            pom {
+                name.set("platform-info")
+                description.set("Kotlin Multiplatform Library providing platform info")
+                url.set("https://github.com/LandryNorris/PlatformInfo")
+                licenses {
+                    license {
+                        name.set("The MIT License")
+                        url.set("https://opensource.org/licenses/MIT")
+
+                    }
+                }
+                scm {
+                    connection.set("https://github.com/LandryNorris/PlatformInfo.git")
+                    developerConnection.set("https://github.com/LandryNorris/PlatformInfo")
+                    url.set("https://github.com/LandryNorris/PlatformInfo")
+                }
+                developers {
+                    developer {
+                        id.set("landrynorris")
+                        name.set("Landry Norris")
+                        email.set("landry.norris0@gmail.com")
+                    }
+                }
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            name = "sonatypeRepository"
+            url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+
+            credentials {
+                username = getProperty("sonatype.username")
+                password = getProperty("sonatype.password")
+            }
+        }
+    }
+}
+
+project.signing {
+    val secretKeyFile = getProperty("signing.secretKeyRingFile") ?: error("No key file found")
+    val secretKey = File(secretKeyFile).readText()
+    val signingPassword = getProperty("signing.password")
+    useInMemoryPgpKeys(secretKey, signingPassword)
+    sign(project.publishing.publications)
+}
+
+fun getProperty(name: String): String? {
+    return System.getProperty(name) ?: properties.getProperty(name)
 }
