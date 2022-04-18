@@ -4,14 +4,19 @@ plugins {
     kotlin("multiplatform")
     id("org.jetbrains.kotlinx.kover") version "0.5.0"
     id("maven-publish")
+    id("org.jetbrains.dokka") version "1.6.20"
     id("signing")
 }
 
 group = "io.github.landrynorris"
-version = "1.0.2"
+version = "1.0.4"
 
 val properties by lazy {
     Properties().also { it.load(project.rootProject.file("local.properties").inputStream()) }
+}
+
+val javadocJar by tasks.registering(Jar::class) {
+    archiveClassifier.set("javadoc")
 }
 
 repositories {
@@ -89,13 +94,12 @@ kover {
     generateReportOnCheck = true
 }
 
+//https://stackoverflow.com/questions/66329999/publish-kotlin-multiplatform-library-to-maven-central-invalidmavenpublicationex
+
 publishing {
     publications {
-        create<MavenPublication>("release") {
-            groupId = "io.github.landrynorris"
-            artifactId = "platforminfo"
-            from(components["kotlin"])
-            //from(components["java"])
+        withType<MavenPublication> {
+            artifact(javadocJar.get())
             pom {
                 name.set("platforminfo")
                 description.set("Kotlin Multiplatform Library providing platform info")
@@ -124,7 +128,7 @@ publishing {
 
     repositories {
         maven {
-            name = "sonatypeRepository"
+            name = "sonatype"
             url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
 
             credentials {
